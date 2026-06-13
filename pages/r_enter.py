@@ -15,7 +15,7 @@ sheet_id = "1muLk82UaRmXLPyxSGlaD7U7EEKNoCJC0WapaqjeG5p0"
 sheet = client.open_by_key(sheet_id)
 worksheet = sheet.worksheet("Sheet2")
 
-st.title("Maya Tiwari")
+st.title("Ratan Lal Tiwari")
 
 today = date.today()
 st.write("Date: ", today.strftime("%d/%m/%y"))
