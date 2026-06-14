@@ -62,6 +62,10 @@ with col6:
     fig = px.scatter(df, x="date", y="swelling")
     st.plotly_chart(fig)
 
+col7 = st.columns(1)
+with col7:
+    fig = px.line(df, x="date", y="pulse")
+    st.plotly_chart(fig)
 
 if(st.button("Click to view the full spreadsheet.")):
     st.dataframe(df)
