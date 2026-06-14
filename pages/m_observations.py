@@ -63,7 +63,7 @@ with col6:
     fig = px.scatter(df, x="date", y="swelling")
     st.plotly_chart(fig)
 
-col7 = st.columns(1)
+col7, = st.columns(1)
 with col7:
     fig = px.line(df, x="date", y="pulse")
     st.plotly_chart(fig)
