@@ -22,17 +22,18 @@ st.write("Date: ", today.strftime("%d/%m/%y"))
 
 col1, col2 = st.columns(2)
 with col1:
-    bpH = st.number_input("Enter the Systolic value: ", value=0)
+    bpH = st.number_input("Enter the BP High value: ", value=0)
 with col2:
-    bpL = st.number_input("Enter the Diastolic value: ", value=0)
+    bpL = st.number_input("Enter the BP Low value: ", value=0)
 
 oxy = st.number_input("Enter the oxygen value: ", value=0)
 temp = st.number_input("Enter the temperature: ", value=0)
 sugar = st.number_input("Enter the sugar value: ", value=0)
+pulse = st.number_input("Enter the pulse value: ", value=0)
 swelling = st.checkbox("Is there swelling?")
 comment = st.text_input("Any other observations?")
 
-data = [today.strftime("%Y-%m-%d"), bpH, bpL, sugar, oxy, temp, swelling, comment]
+data = [today.strftime("%Y-%m-%d"), bpH, bpL, sugar, pulse, oxy, temp, swelling, comment]
 
 if st.button("Click to submit the data"):
     if bpH <= 0 or bpL <= 0 or oxy <= 0 or temp <= 0:
