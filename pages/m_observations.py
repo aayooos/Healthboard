@@ -25,6 +25,7 @@ df = pd.DataFrame(records)
 df["bp_high"] = pd.to_numeric(df["bp_high"])
 df["bp_low"] = pd.to_numeric(df["bp_low"])
 df["sugar"] = pd.to_numeric(df["sugar"])
+df["pulse"] = pd.to_numeric(df["pulse"])
 df["oxygen"] = pd.to_numeric(df["oxygen"])
 df["temperature"] = pd.to_numeric(df["temperature"])
 
@@ -60,6 +61,11 @@ with col5:
     st.plotly_chart(fig)
 with col6:
     fig = px.scatter(df, x="date", y="swelling")
+    st.plotly_chart(fig)
+
+col7 = st.columns(1)
+with col7:
+    fig = px.line(df, x="date", y="pulse")
     st.plotly_chart(fig)
 
 
